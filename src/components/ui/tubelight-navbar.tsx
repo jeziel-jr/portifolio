@@ -28,8 +28,34 @@ export function NavBar({ items, className }: NavBarProps) {
 
     handleResize();
     window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+
+    // Scroll listener para atualizar activeTab conforme seção visível
+    const handleScroll = () => {
+      let closestSection = null;
+      let minDistance = Infinity;
+      items.forEach((item) => {
+        if (item.url.startsWith("#")) {
+          const sectionId = item.url.replace("#", "");
+          const section = document.getElementById(sectionId);
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            const distance = Math.abs(rect.top - 98); // 98px = altura da navbar
+            if (distance < minDistance && rect.bottom > 98) {
+              minDistance = distance;
+              closestSection = item.name;
+            }
+          }
+        }
+      });
+      if (closestSection) setActiveTab(closestSection);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [items]);
 
   return (
     <div className={cn("h-fit", className)}>
@@ -42,7 +68,26 @@ export function NavBar({ items, className }: NavBarProps) {
             <Link
               key={item.name}
               href={item.url}
-              onClick={() => setActiveTab(item.name)}
+              onClick={(e) => {
+                setActiveTab(item.name);
+                if (item.url.startsWith("#")) {
+                  e.preventDefault();
+                  const sectionId = item.url.replace("#", "");
+                  const navbar = document.querySelector(".flex.items-center");
+                  const navbarHeight = navbar
+                    ? navbar.getBoundingClientRect().height
+                    : 0;
+                  const target = document.getElementById(sectionId);
+                  if (target) {
+                    const y =
+                      target.getBoundingClientRect().top +
+                      window.scrollY -
+                      navbarHeight -
+                      16;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }
+              }}
               className={cn(
                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                 "text-foreground/80 hover:text-primary",

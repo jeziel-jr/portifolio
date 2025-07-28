@@ -9,8 +9,8 @@ import SkillsShowcase from "@/components/skills-show-case";
 export default function HomePage() {
   const { theme, toggleTheme } = useTheme();
   const navItems = [
-    { name: "Sobre mim", url: "#", icon: Briefcase },
-    { name: "Habilidades", url: "#", icon: FileText },
+    { name: "Sobre mim", url: "#about-me", icon: Briefcase },
+    { name: "Habilidades", url: "#skills", icon: FileText },
     { name: "Projetos", url: "#", icon: User },
     { name: "Contato", url: "#", icon: Home },
   ];

@@ -3,7 +3,10 @@ import { FeaturesSectionWithHoverEffects } from "./ui/feature-section-with-hover
 
 export default function SkillsShowcase() {
   return (
-    <div className="min-h-dvh w-full py-10 flex flex-col items-center gap-8 z-50">
+    <div
+      id="skills"
+      className="min-h-dvh w-full py-10 flex flex-col items-center gap-8 z-50"
+    >
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
