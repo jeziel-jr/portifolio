@@ -1,4 +1,5 @@
 import { Github, Linkedin } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function AboutMe() {
   return (
@@ -6,9 +7,19 @@ export default function AboutMe() {
       id="about-me"
       className="min-h-screen flex flex-col items-center justify-center px-4 py-16 text-zinc-900 dark:text-zinc-50 font-inter relative overflow-hidden"
     >
-      <div className="w-full max-w-2xl flex flex-col items-center gap-12 z-10">
+      <motion.div
+        className="w-full max-w-2xl flex flex-col items-center gap-12 z-10"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+      >
         {/* Avatar com efeito */}
-        <div className="relative mb-2">
+        <motion.div
+          className="relative mb-2"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+        >
           <span className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 via-blue-900 to-orange-400 opacity-60 blur-lg animate-glow" />
           <div
             className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-zinc-800 dark:border-zinc-700 shadow-xl z-10 flex items-center justify-center"
@@ -21,9 +32,14 @@ export default function AboutMe() {
               style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           </div>
-        </div>
+        </motion.div>
         {/* Título e descrição */}
-        <div className="flex flex-col items-center gap-3 text-center">
+        <motion.div
+          className="flex flex-col items-center gap-3 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+        >
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight font-geist drop-shadow-lg">
             Oi, eu sou Jeziel 👋
           </h1>
@@ -32,17 +48,27 @@ export default function AboutMe() {
             elegantes, acessíveis e de alta performance com React, TypeScript e
             UI moderna.
           </p>
-        </div>
+        </motion.div>
         {/* Bloco sobre mim */}
-        <div className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/80 dark:bg-zinc-950/80 p-7 shadow-lg text-center font-inter backdrop-blur-lg">
+        <motion.div
+          className="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/80 dark:bg-zinc-950/80 p-7 shadow-lg text-center font-inter backdrop-blur-lg"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
+        >
           <p className="text-lg md:text-xl text-zinc-700 dark:text-zinc-200 font-normal">
             Sempre aprendendo, sempre compartilhando. Meu portfólio apresenta
             projetos que refletem dedicação à qualidade, inovação e evolução
             constante.
           </p>
-        </div>
+        </motion.div>
         {/* Redes sociais */}
-        <div className="flex flex-wrap justify-center gap-4 w-full font-inter">
+        <motion.div
+          className="flex flex-wrap justify-center gap-4 w-full font-inter"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
+        >
           <a
             href="https://github.com/jeziel"
             target="_blank"
@@ -65,8 +91,8 @@ export default function AboutMe() {
             <Linkedin size={28} />
             <span>LinkedIn</span>
           </a>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
         .font-inter { font-family: 'Inter', 'Geist', system-ui, sans-serif; }

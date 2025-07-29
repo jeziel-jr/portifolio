@@ -129,7 +129,7 @@ const ProjectCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="relative h-full group rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3"
+      className="relative flex flex-col group rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3"
     >
       <GlowingEffect
         spread={40}
@@ -152,7 +152,7 @@ const ProjectCard = ({
       </div>
 
       {/* Card Content */}
-      <div className="p-6 space-y-4">
+      <div className="p-6 space-y-4 flex flex-col flex-1">
         <div>
           <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-200">
             {project.title}
@@ -175,7 +175,7 @@ const ProjectCard = ({
         </div>
 
         {/* Action Buttons */}
-        <div className="flex gap-3 pt-2">
+        <div className="flex gap-3 pt-2 mt-auto">
           <a
             href={project.githubUrl}
             target="_blank"
