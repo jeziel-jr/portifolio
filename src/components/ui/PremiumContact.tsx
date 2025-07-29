@@ -11,10 +11,6 @@ import {
   ArrowRight,
   Sparkles,
   CheckCircle,
-  Clock,
-  Globe,
-  Shield,
-  Zap,
 } from "lucide-react";
 
 const contactMethods = [
@@ -22,27 +18,20 @@ const contactMethods = [
     icon: Mail,
     title: "Email",
     description: "Entre em contato por email",
-    value: "seuemail@exemplo.com",
-    link: "mailto:seuemail@exemplo.com",
+    value: "devjezieljunior@gmail.com",
+    link: "mailto:devjezieljunior@gmail.com",
     gradient: "from-blue-500/20 to-cyan-500/20",
     hoverColor: "blue",
   },
   {
     icon: Phone,
     title: "Telefone",
-    description: "Fale diretamente com nossa equipe",
-    value: "+55 (11) 99999-9999",
-    link: "tel:+5511999999999",
+    description: "Fale diretamente pelo telefone",
+    value: "+55 (81) 98970-7979",
+    link: "tel:+5581989707979",
     gradient: "from-green-500/20 to-emerald-500/20",
     hoverColor: "green",
   },
-];
-
-const companyStats = [
-  { label: "Tempo de resposta", value: "< 2h", icon: Clock },
-  { label: "Clientes globais", value: "500+", icon: Globe },
-  { label: "Segurança", value: "SOC 2", icon: Shield },
-  { label: "Sucesso", value: "99.9%", icon: Zap },
 ];
 
 export function PremiumContact() {
@@ -118,7 +107,7 @@ export function PremiumContact() {
   return (
     <section
       id="contact"
-      className="relative py-32  text-white overflow-hidden"
+      className="relative py-20 z-50 text-white overflow-hidden"
     >
       <div className="absolute inset-0">
         <motion.div
@@ -248,41 +237,12 @@ export function PremiumContact() {
           </motion.p>
         </motion.div>
 
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20"
-          variants={fadeInUp}
-        >
-          {companyStats.map((stat, index) => (
-            <motion.div
-              key={index}
-              className="text-center p-6 bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/[0.15] group hover:bg-white/[0.08] transition-all"
-              whileHover={{ scale: 1.05, y: -5 }}
-              variants={fadeInUp}
-            >
-              <motion.div
-                className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-500/20 border border-white/20 flex items-center justify-center mx-auto mb-3"
-                whileHover={{ rotateY: 180 }}
-                transition={{ duration: 0.6 }}
-              >
-                <stat.icon className="w-6 h-6 text-indigo-300" />
-              </motion.div>
-              <div className="text-2xl font-bold text-white mb-1">
-                {stat.value}
-              </div>
-              <div className="text-white/60 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div className="space-y-8" variants={fadeInUp}>
             <div>
               <h3 className="text-3xl font-bold text-white mb-4">
                 Envie uma mensagem
               </h3>
-              <p className="text-white/60 text-lg">
-                Conte sobre seu projeto e retornaremos em até 24h.
-              </p>
             </div>
 
             <AnimatePresence mode="wait">
@@ -297,7 +257,7 @@ export function PremiumContact() {
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/40" />
+                      <User className="absolute z-50 left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/40" />
                       <input
                         type="text"
                         placeholder="Seu nome"
@@ -305,7 +265,7 @@ export function PremiumContact() {
                         onChange={(e) =>
                           handleInputChange("name", e.target.value)
                         }
-                        className={`w-full pl-10 pr-4 py-4 bg-white/[0.08] border rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
+                        className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-white/[0.08] border rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
                           errors.name ? "border-red-400" : "border-white/[0.15]"
                         }`}
                       />
@@ -321,7 +281,7 @@ export function PremiumContact() {
                     </div>
 
                     <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/40" />
+                      <Mail className="absolute z-50 left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/40" />
                       <input
                         type="email"
                         placeholder="Email"
@@ -329,7 +289,7 @@ export function PremiumContact() {
                         onChange={(e) =>
                           handleInputChange("email", e.target.value)
                         }
-                        className={`w-full pl-10 pr-4 py-4 bg-white/[0.08] border rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
+                        className={`w-full pl-10 backdrop-blur-xl pr-4 py-4 bg-white/[0.08] border rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
                           errors.email
                             ? "border-red-400"
                             : "border-white/[0.15]"
@@ -348,7 +308,7 @@ export function PremiumContact() {
                   </div>
 
                   <div className="relative">
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/40" />
+                    <Building className="absolute z-50 left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/40" />
                     <input
                       type="text"
                       placeholder="Empresa (opcional)"
@@ -356,12 +316,12 @@ export function PremiumContact() {
                       onChange={(e) =>
                         handleInputChange("company", e.target.value)
                       }
-                      className="w-full pl-10 pr-4 py-4 bg-white/[0.08] border border-white/[0.15] rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all"
+                      className="w-full pl-10 backdrop-blur-xl pr-4 py-4 bg-white/[0.08] border border-white/[0.15] rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all"
                     />
                   </div>
 
                   <div className="relative">
-                    <MessageSquare className="absolute left-3 top-4 h-5 w-5 text-white/40" />
+                    <MessageSquare className="absolute z-50 left-3 top-4 h-5 w-5 text-white/40" />
                     <textarea
                       placeholder="Conte sobre seu projeto..."
                       rows={6}
@@ -369,7 +329,7 @@ export function PremiumContact() {
                       onChange={(e) =>
                         handleInputChange("message", e.target.value)
                       }
-                      className={`w-full pl-10 pr-4 py-4 bg-white/[0.08] border rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all resize-none ${
+                      className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-white/[0.08] border rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all resize-none ${
                         errors.message
                           ? "border-red-400"
                           : "border-white/[0.15]"
@@ -467,9 +427,6 @@ export function PremiumContact() {
               <h3 className="text-3xl font-bold text-white mb-4">
                 Outras formas de contato
               </h3>
-              <p className="text-white/60 text-lg">
-                Escolha o método que preferir.
-              </p>
             </div>
 
             <div className="space-y-6">
