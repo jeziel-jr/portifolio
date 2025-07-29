@@ -448,9 +448,6 @@ export function PremiumContact() {
                       <h4 className="text-xl font-semibold text-gray-900 dark:text-gray-300 mb-1">
                         {method.title}
                       </h4>
-                      {/* <p className="text-gray-600 dark:text-gray-300/60 text-sm mb-2">
-                        {method.description}
-                      </p> */}
                       <p className="text-gray-900 dark:text-gray-300/60">
                         {method.value}
                       </p>
