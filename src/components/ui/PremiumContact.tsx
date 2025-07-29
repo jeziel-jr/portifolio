@@ -212,7 +212,7 @@ export function PremiumContact() {
             </span>
             <br />
             <motion.span
-              className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-purple-300 to-rose-300"
+              className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-blue-300 to-blue-800"
               animate={{
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
@@ -349,7 +349,7 @@ export function PremiumContact() {
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full relative group overflow-hidden bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium py-4 px-6 rounded-xl transition-all disabled:opacity-50"
+                    className="w-full relative group overflow-hidden bg-gradient-to-r from-indigo-500 to-blue-800 hover:from-indigo-600 hover:to-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all disabled:opacity-50"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
