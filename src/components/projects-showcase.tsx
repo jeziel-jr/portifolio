@@ -96,7 +96,7 @@ export default function ProjectsShowcase() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold sm:text-5xl text-center"
+        className="text-4xl font-bold sm:text-5xl text-center dark:text-gray-200"
       >
         Projetos
       </motion.h2>
@@ -147,7 +147,7 @@ const ProjectCard = ({
         )}
       >
         <div className="absolute inset-0 bg-black/20" />
-        <div className="relative z-10 text-white">{project.icon}</div>
+        <div className="relative z-10 text-gray-300">{project.icon}</div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 

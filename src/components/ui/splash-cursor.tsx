@@ -14,7 +14,7 @@ function SplashCursor({
   SPLAT_RADIUS = 0.2,
   SPLAT_FORCE = 6000,
   SHADING = true,
-  COLOR_UPDATE_SPEED = 2,
+  COLOR_UPDATE_SPEED = 10,
   BACK_COLOR = { r: 0.5, g: 0, b: 0 },
   TRANSPARENT = true,
 }) {
@@ -1188,7 +1188,10 @@ function SplashCursor({
     }
 
     function generateColor(): number[] {
-      const rgb = HSVtoRGB(Math.random(), 1.0, 1.0);
+      // Tons de azul escuro: H entre 0.58 e 0.67, V entre 0.5 e 0.9
+      const h = Math.random() * 0.09 + 0.58;
+      const v = Math.random() * 0.4 + 1.5;
+      const rgb = HSVtoRGB(h, 1.0, v);
       const r = rgb.r ?? 0;
       const g = rgb.g ?? 0;
       const b = rgb.b ?? 0;

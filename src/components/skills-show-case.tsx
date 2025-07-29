@@ -12,7 +12,7 @@ export default function SkillsShowcase() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="text-4xl font-bold sm:text-5xl text-center"
+        className="text-4xl font-bold sm:text-5xl text-center dark:text-gray-200"
       >
         Habilidades
       </motion.h2>

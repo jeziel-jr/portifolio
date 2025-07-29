@@ -8,7 +8,7 @@ export default function CustomInput({}) {
         type="text"
         className="w-full border-none bg-transparent text-base text-neutral-800 placeholder:text-neutral-500 focus:outline-none dark:text-neutral-200 dark:placeholder:text-neutral-500"
       />
-      <button className="flex items-center justify-center rounded-full bg-[#0171E3] p-2.5 text-white transition-colors hover:bg-blue-600 disabled:opacity-70 dark:bg-blue-600 dark:hover:bg-blue-700">
+      <button className="flex items-center justify-center rounded-full bg-[#0171E3] p-2.5 text-gray-300 transition-colors hover:bg-blue-600 disabled:opacity-70 dark:bg-blue-600 dark:hover:bg-blue-700">
         <ArrowRight size={24} />
       </button>
     </div>

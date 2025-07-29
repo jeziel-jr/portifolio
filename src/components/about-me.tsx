@@ -23,7 +23,7 @@ export default function AboutMe() {
           <span className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 via-blue-900 to-orange-400 opacity-60 blur-lg animate-glow" />
           <div
             className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-zinc-700 dark:border-white/70 shadow-xl z-10 flex items-center justify-center"
-            style={{ width: "8rem", height: "8rem" }}
+            style={{ width: "8.5rem", height: "8.5rem" }}
           >
             <img
               src="/avatar.png"
@@ -40,10 +40,10 @@ export default function AboutMe() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
         >
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight font-geist drop-shadow-lg">
+          <h1 className="text-5xl md:text-[42px] font-extrabold leading-tight tracking-tight font-geist drop-shadow-lg dark:text-gray-200">
             Oi, eu sou Jeziel 👋
           </h1>
-          <p className="text-xl md:text-2xl text-center dark:text-zinc-300 max-w-lg mx-auto font-inter font-normal">
+          <p className="text-xl md:text-1xl text-center dark:text-zinc-300 max-w-lg mx-auto font-inter font-normal">
             Desenvolvedor web apaixonado por criar experiências digitais
             elegantes, acessíveis e de alta performance com React, TypeScript e
             UI moderna.
@@ -57,9 +57,8 @@ export default function AboutMe() {
           transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
         >
           <p className="text-lg md:text-xl text-zinc-700 dark:text-zinc-200 font-normal">
-            Sempre aprendendo, sempre compartilhando. Meu portfólio apresenta
-            projetos que refletem dedicação à qualidade, inovação e evolução
-            constante.
+            Sempre aprendendo e compartilhando. Meu portfólio apresenta projetos
+            que refletem dedicação, qualidade, inovação e evolução constante.
           </p>
         </motion.div>
         {/* Redes sociais */}
@@ -73,7 +72,7 @@ export default function AboutMe() {
             href="https://github.com/jeziel"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 px-7 py-3 text-base font-semibold shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl hover:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-300 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white"
+            className="flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 px-7 py-3 text-base font-semibold shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl hover:border-pink-400 focus:outline-none focus:ring-2 focus:ring-pink-300 bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-gray-300"
             style={{ minWidth: 140, minHeight: 56 }}
             tabIndex={0}
           >
@@ -84,7 +83,7 @@ export default function AboutMe() {
             href="https://www.linkedin.com/in/jeziel"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 px-7 py-3 text-base font-semibold shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-300 bg-blue-100 dark:bg-[#0A66C2] text-[#0A66C2] dark:text-white"
+            className="flex items-center gap-2 rounded-full border border-zinc-200 dark:border-zinc-800 px-7 py-3 text-base font-semibold shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-xl hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-300 bg-blue-100 dark:bg-blue-800 text-[#0A66C2] dark:text-gray-300"
             style={{ minWidth: 140, minHeight: 56 }}
             tabIndex={0}
           >
