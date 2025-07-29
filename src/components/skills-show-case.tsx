@@ -5,12 +5,13 @@ export default function SkillsShowcase() {
   return (
     <div
       id="skills"
-      className="min-h-dvh w-full py-10 flex flex-col items-center gap-8 z-50"
+      className="w-full py-10 flex flex-col items-center gap-8 z-50"
     >
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="text-4xl font-bold sm:text-5xl text-center"
       >
         Habilidades
