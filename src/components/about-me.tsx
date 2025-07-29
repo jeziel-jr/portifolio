@@ -22,7 +22,7 @@ export default function AboutMe() {
         >
           <span className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 via-blue-900 to-orange-400 opacity-60 blur-lg animate-glow" />
           <div
-            className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-zinc-800 dark:border-zinc-700 shadow-xl z-10 flex items-center justify-center"
+            className="relative w-32 h-32 rounded-full overflow-hidden border-4 border-zinc-700 dark:border-white/70 shadow-xl z-10 flex items-center justify-center"
             style={{ width: "8rem", height: "8rem" }}
           >
             <img

@@ -107,7 +107,7 @@ export function PremiumContact() {
   return (
     <section
       id="contact"
-      className="relative py-20 z-50 text-white overflow-hidden"
+      className="relative py-20 z-50 text-gray-900 dark:text-white overflow-hidden"
     >
       <div className="absolute inset-0">
         <motion.div
@@ -185,10 +185,10 @@ export function PremiumContact() {
       >
         <motion.div className="text-center mb-20" variants={fadeInUp}>
           <motion.div
-            className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.08] border border-white/[0.15] backdrop-blur-sm mb-6"
+            className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-100/80 dark:bg-white/[0.08] border border-gray-300 dark:border-white/[0.15] backdrop-blur-sm mb-6"
             whileHover={{
               scale: 1.05,
-              borderColor: "rgba(255, 255, 255, 0.3)",
+              borderColor: "rgba(59, 130, 246, 0.3)",
             }}
           >
             <motion.div
@@ -197,7 +197,7 @@ export function PremiumContact() {
             >
               <Sparkles className="h-4 w-4 text-indigo-300" />
             </motion.div>
-            <span className="text-sm font-medium text-white/80">
+            <span className="text-sm font-medium text-gray-700 dark:text-white/80">
               ✨ Vamos conversar
             </span>
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
@@ -207,12 +207,12 @@ export function PremiumContact() {
             className="text-4xl sm:text-6xl md:text-7xl font-bold mb-8 tracking-tight"
             variants={fadeInUp}
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-white/80">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-500 dark:from-white dark:to-white/80">
               Entre em
             </span>
             <br />
             <motion.span
-              className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-blue-300 to-blue-800"
+              className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-400 to-blue-800 dark:from-indigo-400 dark:via-blue-300 dark:to-blue-800"
               animate={{
                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
               }}
@@ -230,7 +230,7 @@ export function PremiumContact() {
           </motion.h2>
 
           <motion.p
-            className="text-xl sm:text-2xl text-white/60 max-w-4xl mx-auto leading-relaxed"
+            className="text-xl sm:text-2xl text-gray-600 dark:text-white/60 max-w-4xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
             Pronto para transformar seu projeto? Conte como podemos ajudar!
@@ -240,7 +240,7 @@ export function PremiumContact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div className="space-y-8" variants={fadeInUp}>
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 Envie uma mensagem
               </h3>
             </div>
@@ -257,7 +257,7 @@ export function PremiumContact() {
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="relative">
-                      <User className="absolute z-50 left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/40" />
+                      <User className="absolute z-50 left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 dark:text-white/40" />
                       <input
                         type="text"
                         placeholder="Seu nome"
@@ -265,8 +265,10 @@ export function PremiumContact() {
                         onChange={(e) =>
                           handleInputChange("name", e.target.value)
                         }
-                        className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-white/[0.08] border rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
-                          errors.name ? "border-red-400" : "border-white/[0.15]"
+                        className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-gray-100/80 dark:bg-white/[0.08] border rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
+                          errors.name
+                            ? "border-red-400"
+                            : "border-gray-300 dark:border-white/[0.15]"
                         }`}
                       />
                       {errors.name && (
@@ -281,7 +283,7 @@ export function PremiumContact() {
                     </div>
 
                     <div className="relative">
-                      <Mail className="absolute z-50 left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/40" />
+                      <Mail className="absolute z-50 left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 dark:text-white/40" />
                       <input
                         type="email"
                         placeholder="Email"
@@ -289,10 +291,10 @@ export function PremiumContact() {
                         onChange={(e) =>
                           handleInputChange("email", e.target.value)
                         }
-                        className={`w-full pl-10 backdrop-blur-xl pr-4 py-4 bg-white/[0.08] border rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
+                        className={`w-full pl-10 backdrop-blur-xl pr-4 py-4 bg-gray-100/80 dark:bg-white/[0.08] border rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
                           errors.email
                             ? "border-red-400"
-                            : "border-white/[0.15]"
+                            : "border-gray-300 dark:border-white/[0.15]"
                         }`}
                       />
                       {errors.email && (
@@ -308,7 +310,7 @@ export function PremiumContact() {
                   </div>
 
                   <div className="relative">
-                    <Building className="absolute z-50 left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/40" />
+                    <Building className="absolute z-50 left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 dark:text-white/40" />
                     <input
                       type="text"
                       placeholder="Empresa (opcional)"
@@ -316,12 +318,12 @@ export function PremiumContact() {
                       onChange={(e) =>
                         handleInputChange("company", e.target.value)
                       }
-                      className="w-full pl-10 backdrop-blur-xl pr-4 py-4 bg-white/[0.08] border border-white/[0.15] rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all"
+                      className="w-full pl-10 backdrop-blur-xl pr-4 py-4 bg-gray-100/80 dark:bg-white/[0.08] border border-gray-300 dark:border-white/[0.15] rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all"
                     />
                   </div>
 
                   <div className="relative">
-                    <MessageSquare className="absolute z-50 left-3 top-4 h-5 w-5 text-white/40" />
+                    <MessageSquare className="absolute z-50 left-3 top-4 h-5 w-5 text-gray-400 dark:text-white/40" />
                     <textarea
                       placeholder="Conte sobre seu projeto..."
                       rows={6}
@@ -329,10 +331,10 @@ export function PremiumContact() {
                       onChange={(e) =>
                         handleInputChange("message", e.target.value)
                       }
-                      className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-white/[0.08] border rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all resize-none ${
+                      className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-gray-100/80 dark:bg-white/[0.08] border rounded-xl text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all resize-none ${
                         errors.message
                           ? "border-red-400"
-                          : "border-white/[0.15]"
+                          : "border-gray-300 dark:border-white/[0.15]"
                       }`}
                     />
                     {errors.message && (
@@ -349,12 +351,12 @@ export function PremiumContact() {
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full relative group overflow-hidden bg-gradient-to-r from-indigo-500 to-blue-800 hover:from-indigo-600 hover:to-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all disabled:opacity-50"
+                    className="w-full relative group overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-indigo-500 dark:to-blue-800 hover:from-blue-700 hover:to-indigo-600 dark:hover:from-indigo-600 dark:hover:to-blue-700 text-white font-medium py-4 px-6 rounded-xl transition-all disabled:opacity-50"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
+                      className="absolute inset-0 bg-gradient-to-r from-blue-200/20 dark:from-white/20 to-transparent"
                       initial={{ x: "-100%" }}
                       whileHover={{ x: "100%" }}
                       transition={{ duration: 0.5 }}
@@ -395,10 +397,10 @@ export function PremiumContact() {
                   >
                     <CheckCircle className="w-10 h-10 text-green-400" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-white mb-4">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                     Mensagem enviada!
                   </h3>
-                  <p className="text-white/60 text-lg mb-6">
+                  <p className="text-gray-600 dark:text-white/60 text-lg mb-6">
                     Obrigado pelo contato. Retornaremos em até 24h.
                   </p>
                   <motion.button
@@ -411,7 +413,7 @@ export function PremiumContact() {
                         message: "",
                       });
                     }}
-                    className="px-6 py-3 bg-white/[0.08] border border-white/[0.15] rounded-xl text-white hover:bg-white/[0.12] transition-all"
+                    className="px-6 py-3 bg-gray-100/80 dark:bg-white/[0.08] border border-gray-300 dark:border-white/[0.15] rounded-xl text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-white/[0.12] transition-all"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -424,7 +426,7 @@ export function PremiumContact() {
 
           <motion.div className="space-y-8" variants={fadeInUp}>
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">
+              <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 Outras formas de contato
               </h3>
             </div>
@@ -434,28 +436,30 @@ export function PremiumContact() {
                 <motion.a
                   key={index}
                   href={method.link}
-                  className="block p-6 bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-white/[0.15] hover:bg-white/[0.08] transition-all group"
+                  className="block p-6 bg-gray-100/60 dark:bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-gray-300 dark:border-white/[0.15] hover:bg-gray-200 dark:hover:bg-white/[0.08] transition-all group"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02, y: -2 }}
                 >
                   <div className="flex items-center gap-4">
                     <motion.div
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${method.gradient} border border-white/20 flex items-center justify-center`}
+                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${method.gradient} border border-gray-300 dark:border-white/20 flex items-center justify-center`}
                       whileHover={{ scale: 1.1, rotateY: 180 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <method.icon className="w-7 h-7 text-white" />
+                      <method.icon className="w-7 h-7 text-blue-600 dark:text-white" />
                     </motion.div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-semibold text-white mb-1">
+                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
                         {method.title}
                       </h4>
-                      <p className="text-white/60 text-sm mb-2">
+                      <p className="text-gray-600 dark:text-white/60 text-sm mb-2">
                         {method.description}
                       </p>
-                      <p className="text-white font-medium">{method.value}</p>
+                      <p className="text-gray-900 dark:text-white font-medium">
+                        {method.value}
+                      </p>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-white/40 group-hover:text-white group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-5 h-5 text-gray-400 dark:text-white/40 group-hover:text-blue-600 dark:group-hover:text-white group-hover:translate-x-1 transition-all" />
                   </div>
                 </motion.a>
               ))}
@@ -466,7 +470,7 @@ export function PremiumContact() {
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-white/20 rounded-full"
+            className="absolute w-2 h-2 bg-blue-600/20 dark:bg-white/20 rounded-full"
             style={{
               left: `${10 + i * 12}%`,
               top: `${20 + i * 10}%`,
