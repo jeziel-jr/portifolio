@@ -6,7 +6,7 @@ import { NavBar } from "@/components/ui/tubelight-navbar";
 import AboutMe from "@/components/about-me";
 import SkillsShowcase from "@/components/skills-show-case";
 import ProjectsShowcase from "@/components/projects-showcase";
-import { GlowingEffect } from "./glowing-effect";
+import { PremiumContact } from "@/components/ui/PremiumContact";
 
 export default function HomePage() {
   const { theme, toggleTheme } = useTheme();
@@ -14,7 +14,7 @@ export default function HomePage() {
     { name: "Sobre mim", url: "#about-me", icon: Briefcase },
     { name: "Habilidades", url: "#skills", icon: FileText },
     { name: "Projetos", url: "#projects", icon: User },
-    { name: "Contato", url: "#", icon: Home },
+    { name: "Contato", url: "#contact", icon: Home },
   ];
 
   return (
@@ -31,17 +31,7 @@ export default function HomePage() {
       <AboutMe />
       <SkillsShowcase />
       <ProjectsShowcase />
-      <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
-        <GlowingEffect
-          spread={40}
-          glow={true}
-          disabled={false}
-          proximity={64}
-          inactiveZone={0.01}
-          borderWidth={3}
-        />
-        oi
-      </div>
+      <PremiumContact />
     </div>
   );
 }
