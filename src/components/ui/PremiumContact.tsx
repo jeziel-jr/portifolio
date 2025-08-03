@@ -193,7 +193,7 @@ export function PremiumContact() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <motion.div className="text-center mb-30" variants={fadeInUp}>
+        <motion.div className="text-center mb-20" variants={fadeInUp}>
           <motion.div
             className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-100/80 dark:bg-white/[0.08] border border-gray-300 dark:border-white/[0.15] backdrop-blur-sm mb-6"
             whileHover={{
@@ -245,8 +245,8 @@ export function PremiumContact() {
           </motion.h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <motion.div className="space-y-8" variants={fadeInUp}>
+        <motion.div variants={fadeInUp} className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <motion.div className="space-y-8">
             <AnimatePresence mode="wait">
               {!isSubmitted ? (
                 <motion.form
@@ -267,11 +267,10 @@ export function PremiumContact() {
                         onChange={(e) =>
                           handleInputChange("name", e.target.value)
                         }
-                        className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-gray-100/80 dark:bg-white/[0.08] border rounded-xl text-gray-900 dark:text-gray-300 placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
-                          errors.name
-                            ? "border-red-400"
-                            : "border-gray-300 dark:border-white/[0.15]"
-                        }`}
+                        className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-gray-100/80 dark:bg-white/[0.08] border rounded-xl text-gray-900 dark:text-gray-300 placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${errors.name
+                          ? "border-red-400"
+                          : "border-gray-300 dark:border-white/[0.15]"
+                          }`}
                       />
                       {errors.name && (
                         <motion.p
@@ -293,11 +292,10 @@ export function PremiumContact() {
                         onChange={(e) =>
                           handleInputChange("email", e.target.value)
                         }
-                        className={`w-full pl-10 backdrop-blur-xl pr-4 py-4 bg-gray-100/80 dark:bg-white/[0.08] border rounded-xl text-gray-900 dark:text-gray-300 placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${
-                          errors.email
-                            ? "border-red-400"
-                            : "border-gray-300 dark:border-white/[0.15]"
-                        }`}
+                        className={`w-full pl-10 backdrop-blur-xl pr-4 py-4 bg-gray-100/80 dark:bg-white/[0.08] border rounded-xl text-gray-900 dark:text-gray-300 placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all ${errors.email
+                          ? "border-red-400"
+                          : "border-gray-300 dark:border-white/[0.15]"
+                          }`}
                       />
                       {errors.email && (
                         <motion.p
@@ -333,11 +331,10 @@ export function PremiumContact() {
                       onChange={(e) =>
                         handleInputChange("message", e.target.value)
                       }
-                      className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-gray-100/80 dark:bg-white/[0.08] border rounded-xl text-gray-900 dark:text-gray-300 placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all resize-none ${
-                        errors.message
-                          ? "border-red-400"
-                          : "border-gray-300 dark:border-white/[0.15]"
-                      }`}
+                      className={`w-full pl-10 pr-4 backdrop-blur-xl py-4 bg-gray-100/80 dark:bg-white/[0.08] border rounded-xl text-gray-900 dark:text-gray-300 placeholder-gray-400 dark:placeholder-white/40 focus:outline-none focus:border-indigo-400 transition-all resize-none ${errors.message
+                        ? "border-red-400"
+                        : "border-gray-300 dark:border-white/[0.15]"
+                        }`}
                     />
                     {errors.message && (
                       <motion.p
@@ -403,7 +400,7 @@ export function PremiumContact() {
                     Mensagem enviada!
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300/60 text-lg mb-6">
-                    Obrigado pelo contato. Retornaremos em até 24h.
+                    Obrigado pelo contato. Retorei assim que possível!
                   </p>
                   <motion.button
                     onClick={() => {
@@ -426,14 +423,13 @@ export function PremiumContact() {
             </AnimatePresence>
           </motion.div>
 
-          <motion.div className="space-y-8" variants={fadeInUp}>
+          <motion.div className="space-y-8">
             <div className="space-y-6">
               {contactMethods.map((method, index) => (
                 <motion.a
                   key={index}
                   href={method.link}
                   className="block px-6 py-8.5 bg-gray-100/60 dark:bg-white/[0.05] backdrop-blur-xl rounded-2xl border border-gray-300 dark:border-white/[0.15] hover:bg-gray-200 dark:hover:bg-white/[0.08] transition-all group"
-                  variants={fadeInUp}
                   whileHover={{ scale: 1.02, y: -2 }}
                 >
                   <div className="flex items-center gap-4">
@@ -458,7 +454,7 @@ export function PremiumContact() {
               ))}
             </div>
           </motion.div>
-        </div>
+        </motion.div>
 
         {[...Array(8)].map((_, i) => (
           <motion.div
